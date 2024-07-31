@@ -29,3 +29,6 @@ ENDIF()
 
 add_executable(two_sum
     l01_two_sum.cpp)
+
+add_executable(remove_duplicates_from_sorted
+  l26_remove_duplicates_from_sorted.cpp)
