@@ -47,3 +47,6 @@ add_executable(merge_sorted_array
 
 add_executable(convert_array_to_binary_search_tree
   l108_convert_sorted_array_to_binary_search_tree.cpp)
+
+add_executable(pascals_triangle
+  l118_pascals_triangle.cpp)
