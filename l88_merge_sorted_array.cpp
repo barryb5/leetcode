@@ -16,8 +16,8 @@ public:
                 ++nums2_count;
             } else {
                 ++nums1_count;
-            } 
-            
+            }
+
             if (nums1[i] == 0 && nums1_count > m) {
                 nums1.erase(nums1.begin() + i, nums1.end());
                 nums1.insert(nums1.end(), nums2.begin() + nums2_count, nums2.end());
@@ -30,7 +30,7 @@ public:
         int i = m - 1;
         int j = n - 1;
         int k = m + n - 1;
-        
+
         while (j >= 0) {
             if (i >= 0 && nums1[i] > nums2[j]) {
                 nums1[k--] = nums1[i--];

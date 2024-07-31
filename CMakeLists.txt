@@ -2,7 +2,7 @@ cmake_minimum_required (VERSION 3.1.0)
 project (leetcode)
 
 # Set Configuration specific DEFINES
-IF ( CMAKE_BUILD_TYPE STREQUAL "Debug" ) 
+IF ( CMAKE_BUILD_TYPE STREQUAL "Debug" )
   add_definitions ( "-DUSE_PERFORMANCE_DATA")
   add_definitions ( "-DDEBUG " )
   add_definitions ( "-D_DEBUG " )
@@ -44,3 +44,6 @@ add_executable(plus_one
 
 add_executable(merge_sorted_array
   l88_merge_sorted_array.cpp)
+
+add_executable(convert_array_to_binary_search_tree
+  l108_convert_sorted_array_to_binary_search_tree.cpp)
