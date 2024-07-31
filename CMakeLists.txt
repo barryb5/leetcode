@@ -35,3 +35,6 @@ add_executable(remove_duplicates_from_sorted
 
 add_executable(remove_element
   l27_remove_element.cpp)
+
+add_executable(search_insert_position
+  l35_search_insert_position.cpp)
