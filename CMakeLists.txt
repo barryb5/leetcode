@@ -65,3 +65,6 @@ add_executable(search_in_rotated_sorted_array
 
 add_executable(valid_sudoku
   l36_valid_sudoku.cpp)
+
+add_executable(count_and_say
+  l38_count_and_say.cpp)
