@@ -68,3 +68,6 @@ add_executable(valid_sudoku
 
 add_executable(count_and_say
   l38_count_and_say.cpp)
+
+add_executable(add_two_numbers
+  l2_add_two_numbers.cpp)
