@@ -23,27 +23,53 @@ public:
                 ++count;
             } else {
                 returnString += std::to_string(count);
-                returnString += toEncode[i-1];
+                returnString += last;
                 last = toEncode[i];
                 count = 1;
             }
         }
         if (count != 0) {
             returnString += std::to_string(count);
-            returnString += toEncode[i-1];
+            returnString += last;
         }
         return returnString;
     }
 
-    static string countAndSay_solution(int n) {
-        return "1";
+    // Same speed (3ms) but more memory efficient
+    static string count_and_say_non_recursive(int n) {
+        std::string startString = "1";
+        std::string returnString = "";
+
+        for (int i = 1; i < n; ++i) {
+            returnString = "";
+            int j = 0;
+            int len = startString.length();
+            char last = startString[0];
+            int count = 0;
+            for ( ; j < startString.length(); ++j) {
+                if (startString[j] == last) {
+                    ++count;
+                } else {
+                    returnString += std::to_string(count);
+                    returnString += last;
+                    last = startString[j];
+                    count = 1;
+                }
+            }
+            if (count != 0) {
+                returnString += std::to_string(count);
+                returnString += last;
+            }
+            startString = std::move(returnString);
+        }
+        return startString;
     }
 };
 
 
 int main() {
     int n = 4;
-    std::string out = L38CountAndSay::count_and_say(n);
+    std::string out = L38CountAndSay::count_and_say_non_recursive(n);
 
     std::cout << out << std::endl;
 
