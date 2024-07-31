@@ -53,3 +53,6 @@ add_executable(pascals_triangle
 
 add_executable(container_with_most_water
   l11_container_with_most_water.cpp)
+
+add_executable(next_permutation
+  l31_next_permutation.cpp)
