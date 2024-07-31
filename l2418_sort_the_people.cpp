@@ -3,11 +3,32 @@
 #include <map>
 #include <algorithm>
 #include <chrono>
+#include <unordered_map>
 
 using namespace std;
 
 class L2418SortThePeople {
+    // struct Comp{
+    //     vector<string>& names;
+    //     vector<int>& heights;
+    //     Comp(vector<string>& n, vector<int>& h) : names(n), heights(h) {}
+
+    //     bool operator() (int lhs, int rhs) {
+    //         if (lhs < rhs) {
+    //             auto idx1 = std::distance(heights.begin(), std::find(heights.begin(), heights.end(), lhs));
+    //             auto idx2 = std::distance(heights.begin(), std::find(heights.begin(), heights.end(), rhs));
+    //             std::iter_swap(names.begin() + idx1, names.begin() + idx2);
+    //             return true;
+    //         }
+    //         return false;
+    //     }
+    // };
 public:
+    // static vector<string> sort_people_doesnt_work(vector<string>& names, vector<int>& heights) {
+    //     std::sort(names.begin(), names.end(), Comp(names, heights));
+    //     return names;
+    // }
+
     static vector<string> sort_people(vector<string>& names, vector<int>& heights) {
         std::map<int, string> htn;
         for (size_t i = 0; i < heights.size(); ++i) {
@@ -21,14 +42,17 @@ public:
     }
 
     static vector<string> sort_people_solution(vector<string>& names, vector<int>& heights) {
-        std::map<int, string> htn;
-        for (size_t i = 0; i < heights[i]; ++i) {
+        std::unordered_map<int, string> htn;
+        for (size_t i = 0; i < heights.size(); ++i) {
             htn[heights[i]] = names[i];
         }
 
-        std::vector<string> returnNames;
-        for (const auto& pair : htn) { returnNames.push_back(pair.second); }
-        return returnNames;
+        std::sort(heights.rbegin(), heights.rend());
+
+        for (size_t i = 0; i < htn.size(); ++i) {
+            names[i] = htn[heights[i]];
+        }
+        return names;
     }
 };
 
