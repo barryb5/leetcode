@@ -32,3 +32,6 @@ add_executable(two_sum
 
 add_executable(remove_duplicates_from_sorted
   l26_remove_duplicates_from_sorted.cpp)
+
+add_executable(remove_element
+  l27_remove_element.cpp)

@@ -37,6 +37,6 @@ int main() {
     int out = L26RemoveDuplicatesFromSorted::removeDuplicates(nums);
 
     cout << out << endl;
-    
+
     return 0;
 }
