@@ -59,3 +59,6 @@ add_executable(next_permutation
 
 add_executable(sort_the_people
   l2418_sort_the_people.cpp)
+
+add_executable(search_in_rotated_sorted_array
+  l31_search_in_rotated_sorted_array.cpp)
