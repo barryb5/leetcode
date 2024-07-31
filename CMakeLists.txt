@@ -38,3 +38,6 @@ add_executable(remove_element
 
 add_executable(search_insert_position
   l35_search_insert_position.cpp)
+
+add_executable(plus_one
+  l66_plus_one.cpp)
