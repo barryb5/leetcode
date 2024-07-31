@@ -6,6 +6,7 @@ using namespace std;
 
 class L11ContainerWithMostWater {
 public:
+    // Didn't figure it out on my own
     static int max_area(vector<int>& height) {
         int max1 = height[0];
         int index1 = 1;
@@ -32,7 +33,22 @@ public:
     }
 
     static int max_area_solution(vector<int>& height) {
-        return 1;
+        int left = 0;
+        int right = height.size()-1;
+        int largestArea = 0;
+        while (left != right) {
+            int area = std::min(height[left], height[right]) * (right - left);
+            if (area > largestArea)
+                largestArea = area;
+            
+            if (height[left] > height[right]) {
+                --right;
+            } else {
+                ++left;
+            }
+        }
+
+        return largestArea;
     }
 };
 
