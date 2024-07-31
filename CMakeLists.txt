@@ -41,3 +41,6 @@ add_executable(search_insert_position
 
 add_executable(plus_one
   l66_plus_one.cpp)
+
+add_executable(merge_sorted_array
+  l88_merge_sorted_array.cpp)
