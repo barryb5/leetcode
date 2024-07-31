@@ -7,23 +7,43 @@ using namespace std;
 
 class L31NextPermutation {
 public:
+    static void helper(vector<int>& nums, vector<int>::reverse_iterator end) {
+        auto last = nums.rbegin();
+        auto secondLast = std::next(last);
+
+        while (secondLast != end) {
+            if (*secondLast < *last) {
+                auto smallest = std::min_element(nums.rbegin(), last);
+                std::swap(*smallest, *secondLast);
+                helper(nums, last);
+                return;
+            }
+            ++last;
+            ++secondLast;
+        }
+
+    }
+
     static void next_permutation(std::vector<int>& nums) {
         if (nums.size() == 1) {
             return;
         }
 
-        auto smallest = std::min_element(nums.begin(), nums.end());
-        auto smallestSwap = std::min_element(nums.begin(), smallest);
+        auto last = nums.rbegin();
+        auto secondLast = std::next(last);
 
-        while (smallest == smallestSwap) {
-            if (smallest == nums.begin()) {
-                std::reverse(nums.begin(), nums.end());
+        while (secondLast != nums.rend()) {
+            if (*secondLast < *last) {
+                auto smallest = std::min_element(nums.rbegin(), last);
+                std::swap(*smallest, *secondLast);
+                helper(nums, last);
                 return;
             }
-            smallest = std::min_element(nums.begin(), std::prev(smallest));
-            smallestSwap = std::min_element(nums.begin(), smallest);
+            ++last;
+            ++secondLast;
         }
-        std::swap(*smallest, *smallestSwap);
+
+        std::reverse(nums.begin(), nums.end());
         return;
     }
 
@@ -32,27 +52,25 @@ public:
             return;
         }
 
-        auto smallest = std::min_element(nums.begin(), nums.end());
-        auto smallestSwap = std::min_element(nums.begin(), smallest);
+        auto it = is_sorted_until(nums.rbegin(), nums.rend());
 
-        while (smallest == smallestSwap) {
-            if (smallest == nums.begin()) {
-                std::reverse(nums.begin(), nums.end());
-                return;
-            }
-            smallest = std::min_element(nums.begin(), std::prev(smallest));
-            smallestSwap = std::min_element(nums.begin(), smallest);
+        if (it != nums.rend()) {
+            auto next = std::upper_bound(nums.rbegin(), it, *it);
+            std::swap(*it, *next);
+            std::reverse(nums.rbegin(), it);
+            return;
         }
-        std::swap(*smallest, *smallestSwap);
+
+        std::reverse(nums.begin(), nums.end());
         return;
     }
 };
 
 
 int main() {
-    vector<int> nums = {3,2,2,3};
+    vector<int> nums = {1,3,2};
     int val = 3;
-    L31NextPermutation::next_permutation(nums, val);
+    L31NextPermutation::next_permutation_solution(nums);
 
     for (int n : nums) {
         std::cout << n << " ";
