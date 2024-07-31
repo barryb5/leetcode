@@ -71,3 +71,6 @@ add_executable(count_and_say
 
 add_executable(add_two_numbers
   l2_add_two_numbers.cpp)
+
+add_executable(longest_substring_without_repeating_characters
+  l3_longest_substring_without_repeating_characters.cpp)
