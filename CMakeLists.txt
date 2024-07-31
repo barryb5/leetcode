@@ -62,3 +62,6 @@ add_executable(sort_the_people
 
 add_executable(search_in_rotated_sorted_array
   l31_search_in_rotated_sorted_array.cpp)
+
+add_executable(valid_sudoku
+  l36_valid_sudoku.cpp)
