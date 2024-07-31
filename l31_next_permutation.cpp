@@ -70,7 +70,7 @@ public:
 int main() {
     vector<int> nums = {1,3,2};
     int val = 3;
-    L31NextPermutation::next_permutation_solution(nums);
+    L31NextPermutation::next_permutation(nums);
 
     for (int n : nums) {
         std::cout << n << " ";

@@ -56,3 +56,6 @@ add_executable(container_with_most_water
 
 add_executable(next_permutation
   l31_next_permutation.cpp)
+
+add_executable(sort_the_people
+  l2418_sort_the_people.cpp)
