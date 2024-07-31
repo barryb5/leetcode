@@ -51,6 +51,6 @@ int main() {
         cout << num;
     }
     cout << '\n';
-    
+
     return 0;
 }
