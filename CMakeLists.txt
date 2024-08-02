@@ -74,3 +74,6 @@ add_executable(add_two_numbers
 
 add_executable(longest_substring_without_repeating_characters
   l3_longest_substring_without_repeating_characters.cpp)
+
+add_executable(first_occurrence_of_string_in_string
+  l28_first_occurrence_of_string_in_string.cpp)
