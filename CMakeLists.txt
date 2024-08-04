@@ -77,3 +77,9 @@ add_executable(longest_substring_without_repeating_characters
 
 add_executable(first_occurrence_of_string_in_string
   l28_first_occurrence_of_string_in_string.cpp)
+
+add_executable(combination_sum
+  l39_combination_sum.cpp)
+
+add_executable(length_of_last_word
+  l58_length_of_last_word.cpp)
