@@ -83,3 +83,6 @@ add_executable(combination_sum
 
 add_executable(length_of_last_word
   l58_length_of_last_word.cpp)
+
+add_executable(kth_distinct_string_in_an_array
+  l2053_kth_distinct_string_in_an_array.cpp)
