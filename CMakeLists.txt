@@ -86,3 +86,6 @@ add_executable(length_of_last_word
 
 add_executable(kth_distinct_string_in_an_array
   l2053_kth_distinct_string_in_an_array.cpp)
+
+add_executable(integer_to_roman
+  l12_integer_to_roman.cpp)
