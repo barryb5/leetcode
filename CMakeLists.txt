@@ -89,3 +89,9 @@ add_executable(kth_distinct_string_in_an_array
 
 add_executable(integer_to_roman
   l12_integer_to_roman.cpp)
+
+add_executable(letter_combinations_of_a_phone_number
+  l17_letter_combinations_of_a_phone_number.cpp)
+
+add_executable(minimum_number_of_pushes_to_type_word_II
+  l3016_minimum_number_of_pushes_to_type_word_II.cpp)
