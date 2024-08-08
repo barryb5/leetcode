@@ -95,3 +95,9 @@ add_executable(letter_combinations_of_a_phone_number
 
 add_executable(minimum_number_of_pushes_to_type_word_II
   l3016_minimum_number_of_pushes_to_type_word_II.cpp)
+
+add_executable(roman_to_integer
+  l13_roman_to_integer.cpp)
+
+add_executable(permutations
+  l46_permutations.cpp)
