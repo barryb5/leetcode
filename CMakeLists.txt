@@ -101,3 +101,9 @@ add_executable(roman_to_integer
 
 add_executable(permutations
   l46_permutations.cpp)
+
+add_executable(valid_palindrome
+  l125_valid_palindrome.cpp)
+
+add_executable(rotate_list
+  l61_rotate_list.cpp)
