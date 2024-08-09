@@ -107,3 +107,6 @@ add_executable(valid_palindrome
 
 add_executable(rotate_list
   l61_rotate_list.cpp)
+
+add_executable(sort_colors
+  l75_sort_colors.cpp)
