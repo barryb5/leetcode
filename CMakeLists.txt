@@ -110,3 +110,6 @@ add_executable(rotate_list
 
 add_executable(sort_colors
   l75_sort_colors.cpp)
+
+add_executable(remove_nth_node_from_end_of_list
+  l19_remove_nth_node_from_end_of_list.cpp)
