@@ -113,3 +113,6 @@ add_executable(sort_colors
 
 add_executable(remove_nth_node_from_end_of_list
   l19_remove_nth_node_from_end_of_list.cpp)
+
+add_executable(sqrt
+  l69_sqrt.cpp)
