@@ -119,3 +119,6 @@ add_executable(sqrt
 
 add_executable(search_in_rotated_array_II
   l81_search_in_rotated_array_II.cpp)
+
+add_executable(group_anagrams
+  l49_group_anagrams.cpp)
