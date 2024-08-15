@@ -22,6 +22,24 @@ public:
 
         return out;
     }
+
+    static std::vector<std::vector<std::string>> group_anagrams_solution(std::vector<std::string>& strs) {
+        if(strs.size()==0) return {};
+
+        unordered_map<string, vector<string>> ump;
+
+        for(auto str: strs){
+            string temp = str;
+            sort(temp.begin(), temp.end());
+            ump[temp].push_back(str);
+        }
+
+        vector<vector<string>> ans;
+        for(auto &it:ump){
+            ans.push_back(it.second);
+        }
+        return ans;
+    }
 };
 
 
