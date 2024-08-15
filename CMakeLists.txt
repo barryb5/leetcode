@@ -116,3 +116,6 @@ add_executable(remove_nth_node_from_end_of_list
 
 add_executable(sqrt
   l69_sqrt.cpp)
+
+add_executable(search_in_rotated_array_II
+  l81_search_in_rotated_array_II.cpp)
