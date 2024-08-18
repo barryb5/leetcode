@@ -122,3 +122,6 @@ add_executable(search_in_rotated_array_II
 
 add_executable(group_anagrams
   l49_group_anagrams.cpp)
+
+add_executable(lemonade_change
+  l860_lemonade_change.cpp)
