@@ -125,3 +125,6 @@ add_executable(group_anagrams
 
 add_executable(lemonade_change
   l860_lemonade_change.cpp)
+
+add_executable(sum_root_to_leaf_numbers
+  l129_sum_root_to_leaf_numbers.cpp)
