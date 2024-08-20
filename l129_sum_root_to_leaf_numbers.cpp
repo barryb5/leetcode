@@ -35,6 +35,26 @@ public:
         treeSearch(root, vals, 0);
         return std::accumulate(vals.begin(), vals.end(), 0);
     }
+
+    static void treeSearchSolution(TreeNode* root, int& total, int upstreamVal) {
+        upstreamVal *= 10;
+        upstreamVal += root->val;
+
+        if (nullptr != root->left) {
+            treeSearchSolution(root->left, total, upstreamVal);
+        }
+        if (nullptr != root->right) {
+            treeSearchSolution(root->right, total, upstreamVal);
+        }
+        if (nullptr == root->left && nullptr == root->right) {
+            total += upstreamVal;
+        }
+    }
+    int sum_numbers_second_attempt(TreeNode* root) {
+        int total = 0;
+        treeSearchSolution(root, total, 0);
+        return total;
+    }
 };
 
 int main() {
