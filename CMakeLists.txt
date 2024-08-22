@@ -128,3 +128,6 @@ add_executable(lemonade_change
 
 add_executable(sum_root_to_leaf_numbers
   l129_sum_root_to_leaf_numbers.cpp)
+
+add_executable(triangle
+  l120_triangle.cpp)
