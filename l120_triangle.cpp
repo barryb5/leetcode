@@ -24,6 +24,19 @@ public:
         }
         return total;
     }
+
+    static int minimum_total_solution(std::vector<std::vector<int>> triangle) {
+        std::vector<int> solutions(triangle.size() + 1, 0);
+
+        for (int row = triangle.size() - 1; row >= 0; --row) {
+            for (int col = 0; col <= row; ++col)
+            {
+                solutions[col] = std::min(solutions[col], solutions[col + 1]) + triangle[row][col];
+            }
+        }
+
+        return solutions[0];
+    }
 };
 
 
