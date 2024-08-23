@@ -134,3 +134,6 @@ add_executable(triangle
 
 add_executable(climbing_stairs
   l70_climbing_stairs.cpp)
+
+add_executable(best_time_to_buy_and_sell_stock
+  l121_best_time_to_buy_and_sell_stock.cpp)
