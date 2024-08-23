@@ -1,0 +1,38 @@
+#include <iostream>
+#include <vector>
+#include <unordered_map>
+
+using namespace std;
+
+class L70ClimbingStairs {
+public:
+    static void dfs(int curr, int end, int &total)
+    {
+        if (curr + 1 == end) {
+            ++total;
+        } else if (curr + 2 == end) {
+            ++total;
+        } else if (curr + 1 > end) {
+            return;
+        } else if (curr + 2 > end) {
+            return;
+        }
+
+        dfs(curr + 1, end, total);
+        dfs(curr + 2, end, total);
+    }
+    static int climbing_stairs_dfs(int n) {
+        int total = 0;
+        dfs(0, n, total);
+        return total;
+    }
+};
+
+
+int main() {
+    int n = 5;
+    int out = L70ClimbingStairs::climbing_stairs_dfs(n);
+
+    cout << out << endl;
+    return 0;
+}

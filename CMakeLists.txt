@@ -131,3 +131,6 @@ add_executable(sum_root_to_leaf_numbers
 
 add_executable(triangle
   l120_triangle.cpp)
+
+add_executable(climbing_stairs
+  l70_climbing_stairs.cpp)
