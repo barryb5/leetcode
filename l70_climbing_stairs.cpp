@@ -26,6 +26,17 @@ public:
         dfs(0, n, total);
         return total;
     }
+    static int climbing_stairs_dp(int n) {
+        int cache[n+1];
+        for (int i = n; i > -1; --i) {
+            if (i == n || i == n-1) {
+                cache[i] = 1;
+            } else {
+                cache[i] = cache[i + 1] + cache[i + 2];
+            }
+        }
+        return cache[0];
+    }
 };
 
 
