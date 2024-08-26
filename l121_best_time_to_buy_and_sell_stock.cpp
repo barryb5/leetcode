@@ -18,6 +18,23 @@ public:
 
         return biggest;
     }
+
+    static int max_profit_solution(vector<int>& prices) {
+        int biggest = 0;
+        int l = 0;
+        int r = 1;
+
+        while (r < prices.size()) {
+            if (prices[l] > prices[r]) {
+                l = r;
+            } else {
+                biggest = std::max(prices[r] - prices[l], biggest);
+            }
+            ++r;
+        }
+
+        return biggest;
+    }
 };
 
 
