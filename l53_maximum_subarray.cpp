@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <climits>
 
 using namespace std;
 
@@ -33,6 +34,15 @@ public:
         }
 
         return biggest;
+    }
+
+    int max_sub_array_solution(vector<int>& nums) {
+        int n = size(nums), ans = INT_MIN;
+        for(int i = 0; i < n; i++)
+            for(int j = i, curSum = 0; j < n ; j++)
+                curSum += nums[j],
+                ans = max(ans, curSum);
+        return ans;
     }
 };
 
