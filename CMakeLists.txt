@@ -137,3 +137,9 @@ add_executable(climbing_stairs
 
 add_executable(best_time_to_buy_and_sell_stock
   l121_best_time_to_buy_and_sell_stock.cpp)
+
+add_executable(maximum_subarray
+  l53_maximum_subarray.cpp)
+
+add_executable(integer_break
+  l343_integer_break.cpp)
