@@ -9,6 +9,8 @@ public:
     static void work_back(vector<vector<int>>& grid, vector<vector<int>>& solution, int i, int j, int currentVal) {
         if (solution[i][j] > grid[i][j] + currentVal) {
             solution[i][j] = grid[i][j] + currentVal;
+        } else {
+            return;
         }
         if (i == 0 && j == 0) {
             return;
@@ -23,8 +25,7 @@ public:
 
     static int min_path_sum(vector<vector<int>>& grid) {
         vector<vector<int>> solution(grid.size(), vector<int>(grid.front().size(), 2147483647));
-        solution[grid.size() - 1][grid.front().size() - 1] = grid[grid.size() - 1][grid.front().size() - 1];
-        work_back(grid, solution, grid.size() - 1, grid.front().size() - 1, grid[grid.size() - 1][grid.front().size() - 1]);
+        work_back(grid, solution, grid.size() - 1, grid.front().size() - 1, 0);
         return solution[0][0];
     }
 };
