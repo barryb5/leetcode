@@ -143,3 +143,6 @@ add_executable(maximum_subarray
 
 add_executable(integer_break
   l343_integer_break.cpp)
+
+add_executable(minimum_path_sum
+  l64_minimum_path_sum.cpp)
