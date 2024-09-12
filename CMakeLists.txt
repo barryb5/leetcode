@@ -146,3 +146,9 @@ add_executable(integer_break
 
 add_executable(minimum_path_sum
   l64_minimum_path_sum.cpp)
+
+add_executable(house_robber
+  l198_house_robber.cpp)
+
+add_executable(maximal_square
+  l221_maximal_square.cpp)
