@@ -152,3 +152,6 @@ add_executable(house_robber
 
 add_executable(maximal_square
   l221_maximal_square.cpp)
+
+add_executable(merge_two_lists
+  l21_merge_two_sorted_lists.cpp)
